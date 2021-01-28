@@ -7,14 +7,22 @@ import Routes from './routes';
 //page layout
 import Layout from './layout';
 //import redux action
-import { getOwnerListDetails } from 'redux/actions/getOwnersAction';
+import { getCurrencyDetails } from 'redux/actions/getCurrencyAction';
 
 const history = createBrowserHistory();
 
-const App = ({ getOwnerListDetails }) => {
+const App = ({ getCurrencyDetails }) => {
   useEffect(() => {
-    getOwnerListDetails();
+    // getCurrencyDetails();
+    try {
+      setInterval(async () => {
+        getCurrencyDetails();
+      }, 5000);
+    } catch (e) {
+      console.log(e);
+    }
   }, []);
+
   return (
     <Router history={history}>
       <Layout>
@@ -24,4 +32,4 @@ const App = ({ getOwnerListDetails }) => {
   );
 };
 
-export default connect(null, { getOwnerListDetails })(App);
+export default connect(null, { getCurrencyDetails })(App);

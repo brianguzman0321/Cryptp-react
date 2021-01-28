@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import CustomButton from 'components/Button';
+import { Typography } from '@material-ui/core';
 
 const styles = theme => ({
   appBar: {
@@ -12,22 +12,20 @@ const styles = theme => ({
     padding: 10,
     transition: '0.2s !important',
   },
-  headBtn: {
+  headerTxt: {
     marginRight: 10,
+    fontSize: 20,
+    fontWeight: 600,
+    color: '#000',
   },
 });
 
-const AppHeader = ({ classes, history }) => {
+const AppHeader = ({ classes }) => {
   return (
     <div>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
-          <CustomButton className={classes.headBtn} onClick={() => history.push('/')}>
-            Home Page
-          </CustomButton>
-          <CustomButton className={classes.headBtn} onClick={() => history.push('/dashboard')}>
-            Dashboard
-          </CustomButton>
+          <Typography className={classes.headerTxt}>Recent Cyptocurrency Details</Typography>
         </Toolbar>
       </AppBar>
     </div>

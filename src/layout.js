@@ -6,18 +6,18 @@ import { Root, Page } from 'components/StyledComponents';
 //custom components
 import AppHeader from 'components/Header';
 
-const Layout = ({ children, isLoading }) => {
+const Layout = ({ children, currencies }) => {
   return (
     <Root>
       <AppHeader />
-      <Page isLoading={isLoading}>{children}</Page>
+      <Page isLoading={currencies.length === 0}>{children}</Page>
     </Root>
   );
 };
 
 const mapStateToProps = state => {
-  const { common } = state;
-  return { isLoading: common.loadingStatus };
+  const { currencies } = state;
+  return { currencies: currencies.currencyDetails };
 };
 
 export default connect(mapStateToProps, null)(Layout);

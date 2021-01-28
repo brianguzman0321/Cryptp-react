@@ -1,5 +1,5 @@
-export const OWNER_TYPES_LIST = [
-  { ownerTypeDesc: 'Investor', ownerTypeId: 1 },
-  { ownerTypeDesc: 'Founder', ownerTypeId: 2 },
-  { ownerTypeDesc: 'Employee', ownerTypeId: 3 },
+export const CURRENCY_TABLE_HEADER = [
+  { title: 'Currency' },
+  { title: 'Price' },
+  { title: '24hr Change' },
 ];

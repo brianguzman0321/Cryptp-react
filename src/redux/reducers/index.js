@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import commonReducer from './commonReducer';
-import ownersReducer from './ownersReducer';
+import currencyReducer from './currencyReducer';
 
 const reducers = combineReducers({
-  common: commonReducer,
-  owners: ownersReducer,
+  currencies: currencyReducer,
 });
 
 export default reducers;

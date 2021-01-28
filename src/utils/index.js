@@ -1,5 +1,8 @@
+import React from 'react';
 import { toast } from 'react-toastify';
-import moment from 'moment';
+//icons
+import { FaEthereum } from 'react-icons/fa';
+import { FaBtc } from 'react-icons/fa';
 
 export const toastr = {
   success: string => toast.success(`✔️ ${string}`),
@@ -8,11 +11,7 @@ export const toastr = {
     ❌ ${string}`),
 };
 
-export const a11yProps = index => ({
-  id: `simple-tab-${index}`,
-  'aria-controls': `simple-tabpanel-${index}`,
-});
-
-export const getAccurateDate = date => {
-  return moment(date).add(1, 'days').format('YYYY-MM-DD');
-};
+export const currencyIcons = [
+  { symbol: 'ETH', icon: <FaEthereum /> },
+  { symbol: 'BTC', icon: <FaBtc /> },
+];
