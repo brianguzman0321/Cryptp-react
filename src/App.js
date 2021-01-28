@@ -13,7 +13,6 @@ const history = createBrowserHistory();
 
 const App = ({ getCurrencyDetails }) => {
   useEffect(() => {
-    // getCurrencyDetails();
     try {
       setInterval(async () => {
         getCurrencyDetails();
