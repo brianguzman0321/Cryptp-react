@@ -33,8 +33,15 @@ const muiStyles = theme => ({
 const HomePage = ({ classes, currencies }) => {
   const [chartsDisplay, setChartsDisplay] = useState(true);
   return (
-    <Grid container alignItems="center" justify="center" className={classes.container}>
+    <Grid
+      container
+      alignItems="center"
+      justify="center"
+      className={classes.container}
+      direction="column"
+    >
       <Typography variant="h5">Recent Cyptocurrency Details</Typography>
+      <Typography>(Update every 60 seconds)</Typography>
       <Grid
         item
         container

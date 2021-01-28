@@ -16,7 +16,7 @@ const App = ({ getCurrencyDetails }) => {
     try {
       setInterval(async () => {
         getCurrencyDetails();
-      }, 5000);
+      }, 60000);
     } catch (e) {
       console.log(e);
     }

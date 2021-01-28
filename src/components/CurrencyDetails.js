@@ -54,10 +54,10 @@ const CurrencyDetails = ({ currencies, classes }) => {
                 {c.name}
               </Grid>
               <Grid item xs={4} className={classes.tableCell}>
-                {c.quote.USD.price}
+                {c.quote.USD.price.toFixed(2)}
               </Grid>
               <Grid item xs={4} className={classes.tableCell}>
-                {c.quote.USD.percent_change_24h}
+                {`${c.quote.USD.percent_change_24h.toFixed(2)} %`}
               </Grid>
             </Grid>
           ))}
